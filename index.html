@@ -2,31 +2,41 @@
 
 <html>
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Caption&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width,initial-scale=1.0;"> 
     <style> 
+        body{
+            background-color: #C8C6C6;
+        }
         #t_c{
             position: fixed;
-            top: 10px;
+            top: 8px;
             right: 30px;
+            color: red;
+            font-family: 'PT Sans Caption', sans-serif;
         }
         #timer{
             position: relative;
         }
         #container {
             display: block;
+            padding: 2px;
             margin: auto;
             margin-top: 70px;
             height: 500px;
             width: 20vw;
-            border: 2px solid gray;
+            border: 3px solid black;
             border-radius: 3%;
-            background-color: black;
+            background-color: #565656;
         }
         #container div {
             margin: 10px 0px 10px 0px;
             border-radius: 50%;
             width: 100%;
             height: 150px;
+            border: 1px solid black;
         }
         #red {
             background-color: #5F0101;
@@ -38,7 +48,19 @@
             background-color: #0F7601;
         }
         #btn{
-            margin:auto;
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        button{
+            background-color: black;
+            padding: 6px;
+            color: white;
+            border-radius: 2px;
+        }
+        button:hover{
+            background-color: white;
+            color: black;
         }
 
         @media only screen and (max-width: 450px){
@@ -53,7 +75,7 @@
 <body onload="red()">
 
     <div id="t_c">
-        <h2 id="timer"></h2>
+        <h1 id="timer"></h2>
     </div>
 
     <div id="container">
@@ -63,9 +85,9 @@
     </div>
 
     <div id="btn">
-        <button onclick="red()">red</button>
-        <button onclick="yellow()">yellow</button>
-        <button onclick="green()">Green</button>
+        <button onclick="red()">RED</button>
+        <button onclick="yellow()">YELLOW</button>
+        <button onclick="green()">GREEN</button>
     </div>
 
     <script src="index.js" ></script>
